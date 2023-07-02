@@ -1,0 +1,21 @@
+Link: https://www.mycompiler.io/view/BULVbi6fnNQ
+
+CREATE TABLE carrinho (
+  id INTEGER PRIMARY KEY,
+  nome_produto VARCHAR(255) NOT NULL,
+  quantidade INTEGER NOT NULL,
+  preco numeric(7, 2) NOT NULL
+);
+
+INSERT INTO carrinho VALUES (1, 'PS 5', 2, 4999.00);
+INSERT INTO carrinho VALUES (2, 'Perfume One Million', 5, 400.00);
+INSERT INTO carrinho VALUES (3, 'Camisa do Flamengo', 11, 350.00);
+INSERT INTO carrinho VALUES (4, 'Whisky Royal Salutre', 2, 975.00);
+INSERT INTO carrinho VALUES (5, 'iPhone 14 Pro', 5, 8000.00);
+
+UPDATE carrinho SET preco = 1900.00 WHERE nome_produto = 'PS 5';
+-- UPDATE carrinho SET preco = 1900.00 WHERE id IN (1, 5);
+
+DELETE FROM carrinho WHERE id = 5;
+
+SELECT * from carrinho;
